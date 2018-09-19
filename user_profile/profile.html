@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Account Detail</title>
+     <link rel="stylesheet" type="text/css" href="Profile.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: white;
+    color: black;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 40px;
+}
+
+.button{
+    background-color: #4CAF50; /*Green*/
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
+
+
+/* Column container */
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+   
+}
+ /* table */
+table, th, td {
+ border: 1px solid black;
+ border-collapse: collapse;
+ text-align: center;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Pizza Ordering</h1>
+  <p>A <b>responsive</b> website created by Jolie.</p>
+    
+    <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('Menu', this, 'green')" id="defaultOpen">Menu</button>
+<button class="tablink" onclick="openPage('Promotions', this, 'blue')">Promotions</button>
+<button class="tablink" onclick="openPage('LocateUs', this, 'orange')">Locate Us</button>
+
+</div>
+
+
+    <div class="row">
+  <div class="side">
+      <h2>About Me</h2>
+  </div>
+  <div class="main">
+      <h2>Order History</h2>
+      <table style="width:100%">      
+  <tr>
+    <th>Order</th>
+    <th>Date</th> 
+    <th>Total</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>#1234</td>
+    <td>12/09/18</td> 
+    <td>50</td>
+    <td>Fulfilled</td>
+  </tr>
+</table>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
